@@ -8,6 +8,23 @@
       "listen_port": 8080,
       "users": [{ "uuid": "PASTE_YOUR_UUID_HERE" }],
       "transport": { "type": "ws", "path": "/vless" }
+    },
+    {
+      "type": "tuic",
+      "tag": "tuic-in",
+      "listen": "::",
+      "listen_port": 10086,
+      "users": [
+        {
+          "uuid": "PASTE_YOUR_UUID_HERE",
+          "password": "PASTE_YOUR_TUIC_PASS_HERE"
+        }
+      ],
+      "congestion_control": "bbr",
+      "alpn": ["h3"],
+      "ecc_certificate": {
+        "type": "self_signed"
+      }
     }
   ],
   "outbounds": [{ "type": "direct", "tag": "direct" }]
