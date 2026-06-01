@@ -15,12 +15,9 @@ on:
 
 
 env:
-
   REGISTRY: ghcr.io
-
-  # github.repository 会自动获取你的仓库名，即 zzzhhh1/Sing-Flare-Auto
-
-  IMAGE_NAME: huowin-qiu/test-1-0
+  # 让系统完全自动匹配你的用户名和仓库名，100% 不会因为权限或大小写报错
+  IMAGE_NAME: ${{ github.repository }}
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 
